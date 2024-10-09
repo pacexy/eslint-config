@@ -1,0 +1,37 @@
+{
+  "name": "[name]",
+  "version": "0.0.0",
+  "description": "[description]",
+  "keywords": [],
+  "homepage": "https://github.com/pacexy/[name]#readme",
+  "bugs": "https://github.com/pacexy/[name]/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pacexy/[name].git"
+  },
+  "license": "MIT",
+  "author": "pacexy <pacexy@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "prepare": "simple-git-hooks",
+    "release": "bumpp && pnpm publish"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,mdx,css,json,yml,yaml}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
+  },
+  "prettier": "@pacexy/prettier-config",
+  "devDependencies": {
+    "@pacexy/prettier-config": "^0.4.1",
+    "bumpp": "^9.6.1",
+    "eslint": "^9.12.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "packageManager": "pnpm@9.12.1"
+}
