@@ -1,13 +1,13 @@
 {
-  "name": "[name]",
+  "name": "@pacexy/eslint-config",
   "version": "0.0.0",
-  "description": "[description]",
+  "description": "@pacexy's ESLint config",
   "keywords": [],
-  "homepage": "https://github.com/pacexy/[name]#readme",
-  "bugs": "https://github.com/pacexy/[name]/issues",
+  "homepage": "https://github.com/pacexy/eslint-config#readme",
+  "bugs": "https://github.com/pacexy/eslint-config/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pacexy/[name].git"
+    "url": "git+https://github.com/pacexy/eslint-config.git"
   },
   "license": "MIT",
   "author": "pacexy <pacexy@gmail.com>",
