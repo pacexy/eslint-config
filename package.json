@@ -2,7 +2,9 @@
   "name": "@pacexy/eslint-config",
   "version": "0.0.0",
   "description": "@pacexy's ESLint config",
-  "keywords": [],
+  "keywords": [
+    "eslint-config"
+  ],
   "homepage": "https://github.com/pacexy/eslint-config#readme",
   "bugs": "https://github.com/pacexy/eslint-config/issues",
   "repository": {
@@ -12,6 +14,10 @@
   "license": "MIT",
   "author": "pacexy <pacexy@gmail.com>",
   "type": "module",
+  "main": "./eslint.config.js",
+  "files": [
+    "./eslint.config.js"
+  ],
   "scripts": {
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
