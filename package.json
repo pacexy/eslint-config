@@ -45,5 +45,8 @@
     "prettier": "^3.3.3",
     "simple-git-hooks": "^2.11.1"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@9.12.1",
+  "publishConfig": {
+    "access": "public"
+  }
 }
