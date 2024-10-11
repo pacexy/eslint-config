@@ -15,6 +15,7 @@ export default tseslint.config(
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  ...(hasNext ? fixupConfigRules(compat.extends('next/core-web-vitals')) : []),
+  ...(hasNext
+    ? fixupConfigRules(compat.extends('next/core-web-vitals'))
+    : [pluginReact.configs.flat.recommended]),
 )
