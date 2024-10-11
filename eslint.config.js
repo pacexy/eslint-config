@@ -1,3 +1,4 @@
+import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import pluginJs from '@eslint/js'
 import pluginReact from 'eslint-plugin-react'
@@ -15,5 +16,5 @@ export default tseslint.config(
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  ...(hasNext ? compat.extends('next/core-web-vitals') : []),
+  ...(hasNext ? fixupConfigRules(compat.extends('next/core-web-vitals')) : []),
 )
