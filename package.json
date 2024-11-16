@@ -19,6 +19,7 @@
     "./eslint.config.js"
   ],
   "scripts": {
+    "dev": "eslint-config-inspector",
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
     "release": "bumpp && pnpm publish"
@@ -42,6 +43,7 @@
     "typescript-eslint": "^8.8.1"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.6",
     "@pacexy/prettier-config": "^0.4.1",
     "bumpp": "^9.6.1",
     "eslint": "^9.12.0",
