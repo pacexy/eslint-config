@@ -19,7 +19,7 @@
     "./eslint.config.js"
   ],
   "scripts": {
-    "dev": "eslint-config-inspector",
+    "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
     "release": "bumpp && pnpm publish"
