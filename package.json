@@ -23,7 +23,8 @@
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
-    "release": "bumpp && pnpm publish"
+    "release": "bumpp && pnpm publish",
+    "typegen": "node scripts/typegen.js"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -46,8 +47,10 @@
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.6",
     "@pacexy/prettier-config": "^0.4.1",
+    "@types/node": "^22.10.2",
     "bumpp": "^9.8.1",
     "eslint": "^9.15.0",
+    "eslint-typegen": "^0.3.2",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "simple-git-hooks": "^2.11.1"
