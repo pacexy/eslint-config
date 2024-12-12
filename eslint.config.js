@@ -19,5 +19,5 @@ export default tseslint.config(
   // @ts-expect-error TODO:
   ...(hasNext
     ? fixupConfigRules(compat.extends('next/core-web-vitals'))
-    : [pluginReact.configs.flat.recommended]),
+    : [pluginReact.configs.flat?.recommended]),
 )
