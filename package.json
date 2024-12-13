@@ -25,7 +25,7 @@
     "prepare": "simple-git-hooks",
     "release": "bumpp && pnpm publish",
     "typegen": "node scripts/typegen.js",
-    "update": "pnpm update"
+    "update": "pnpm update --latest"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -39,14 +39,14 @@
     "@eslint/compat": "^1.2.4",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.16.0",
-    "eslint-config-next": "^14.2.20",
+    "eslint-config-next": "^15.1.0",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.13.0",
     "local-pkg": "^0.5.1",
     "typescript-eslint": "^8.18.0"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^0.5.6",
+    "@eslint/config-inspector": "^0.6.0",
     "@pacexy/prettier-config": "^0.4.1",
     "@types/node": "^22.10.2",
     "bumpp": "^9.9.1",
