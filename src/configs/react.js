@@ -12,9 +12,11 @@ const hasNext = isPackageExists('next')
 export const react = [
   ...(hasNext
     ? fixupConfigRules(compat.extends('next/core-web-vitals'))
-    : [pluginReact.configs.flat?.recommended]),
+    : [
+        { name: 'react/recommended', ...pluginReact.configs.flat?.recommended },
+      ]),
   {
-    name: 'pacexy/react',
+    name: 'react/custom',
     rules: {
       'react/react-in-jsx-scope': 'off',
     },
