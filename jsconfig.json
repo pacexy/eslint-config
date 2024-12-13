@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "checkJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strictFunctionTypes": true,
