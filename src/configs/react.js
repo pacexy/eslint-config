@@ -13,12 +13,17 @@ export const react = [
   ...(hasNext
     ? fixupConfigRules(compat.extends('next/core-web-vitals'))
     : [
-        { name: 'react/recommended', ...pluginReact.configs.flat?.recommended },
+        {
+          name: 'react/recommended',
+          ...pluginReact.configs.flat?.recommended,
+        },
+        {
+          name: 'react/jsx-runtime',
+          ...pluginReact.configs.flat?.['jsx-runtime'],
+        },
       ]),
   {
     name: 'react/custom',
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-    },
+    rules: {},
   },
 ]
