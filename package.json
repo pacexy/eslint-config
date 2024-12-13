@@ -31,7 +31,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx,css,json,yml,yaml}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx}": "eslint --fix --ignore-pattern=fixtures"
   },
   "prettier": "@pacexy/prettier-config",
   "dependencies": {
