@@ -42,6 +42,7 @@
     "eslint-config-next": "^15.1.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.13.0",
     "local-pkg": "^0.5.1",
     "typescript-eslint": "^8.18.0"

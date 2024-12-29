@@ -13,6 +13,7 @@ export const typescript = tseslint.config(
     files,
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
 )
