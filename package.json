@@ -20,13 +20,14 @@
     "src"
   ],
   "scripts": {
+    "build": "pnpm run typegen",
     "build:inspector": "eslint-config-inspector build",
+    "build:typegen": "node scripts/typegen.js",
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
-    "typegen": "node scripts/typegen.js",
     "update": "corepack use pnpm@latest && pnpm update --latest",
-    "version": "pnpm run typegen",
+    "version": "pnpm run build",
     "postversion": "git push --follow-tags && npm publish"
   },
   "simple-git-hooks": {
