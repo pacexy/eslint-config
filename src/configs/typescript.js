@@ -1,5 +1,6 @@
 import tseslint from 'typescript-eslint'
 import { GLOB_TS_SRC } from '../globs.js'
+import { unusedImports } from '../plugins/unused-imports.js'
 
 const files = GLOB_TS_SRC
 
@@ -14,7 +15,7 @@ export const typescript = [
     files,
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
+      ...unusedImports.typescript.rules,
     },
   },
 ]

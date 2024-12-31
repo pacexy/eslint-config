@@ -1,7 +1,7 @@
 import pluginJs from '@eslint/js'
-import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import { GLOB_JS_SRC } from '../globs.js'
+import { unusedImports } from '../plugins/unused-imports.js'
 
 const files = GLOB_JS_SRC
 
@@ -20,22 +20,10 @@ export const javascript = [
     name: 'javascript/custom',
     files,
     plugins: {
-      'unused-imports': pluginUnusedImports,
+      ...unusedImports.javascript.plugins,
     },
     rules: {
-      'no-unused-vars': 'off',
-      // TODO: detect isInEditor
-      'unused-imports/no-unused-imports': 'error',
-      'unused-imports/no-unused-vars': [
-        'error',
-        {
-          args: 'after-used',
-          argsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-          vars: 'all',
-          varsIgnorePattern: '^_',
-        },
-      ],
+      ...unusedImports.javascript.rules,
     },
   },
 ]
