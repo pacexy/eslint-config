@@ -22,11 +22,11 @@
   "scripts": {
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
-    "prepack": "pnpm run typegen",
     "prepare": "simple-git-hooks",
-    "release": "bumpp && pnpm publish",
     "typegen": "node scripts/typegen.js",
-    "update": "corepack use pnpm@latest && pnpm update --latest"
+    "update": "corepack use pnpm@latest && pnpm update --latest",
+    "version": "pnpm run typegen",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -52,7 +52,6 @@
     "@eslint/config-inspector": "^0.6.0",
     "@pacexy/prettier-config": "^0.4.1",
     "@types/node": "^22.10.2",
-    "bumpp": "^9.9.1",
     "eslint": "^9.16.0",
     "eslint-typegen": "^0.3.2",
     "lint-staged": "^15.2.11",
