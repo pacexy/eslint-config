@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
+    "prepack": "pnpm run typegen",
     "prepare": "simple-git-hooks",
     "release": "bumpp && pnpm publish",
     "typegen": "node scripts/typegen.js",
