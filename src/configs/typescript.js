@@ -3,9 +3,10 @@ import { GLOB_TS_SRC } from '../globs.js'
 
 const files = GLOB_TS_SRC
 
-export const typescript = tseslint.config(
+/** @type {import('eslint').Linter.Config[]} */
+export const typescript = [
   ...tseslint.configs.recommended.map((config) => ({
-    ...config,
+    .../** @type {any} */ (config),
     files,
   })),
   {
@@ -16,4 +17,4 @@ export const typescript = tseslint.config(
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
-)
+]
