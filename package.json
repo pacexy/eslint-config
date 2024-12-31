@@ -25,7 +25,7 @@
     "prepare": "simple-git-hooks",
     "release": "bumpp && pnpm publish",
     "typegen": "node scripts/typegen.js",
-    "update": "pnpm update --latest"
+    "update": "corepack use pnpm@latest && pnpm update --latest"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
