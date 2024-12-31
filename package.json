@@ -20,6 +20,7 @@
     "src"
   ],
   "scripts": {
+    "build:inspector": "eslint-config-inspector build",
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
     "prepare": "simple-git-hooks",
