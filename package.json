@@ -20,7 +20,7 @@
     "src"
   ],
   "scripts": {
-    "build": "pnpm run typegen",
+    "build": "pnpm run build:typegen",
     "build:inspector": "eslint-config-inspector build",
     "build:typegen": "node scripts/typegen.js",
     "dev": "eslint-config-inspector --open false",
