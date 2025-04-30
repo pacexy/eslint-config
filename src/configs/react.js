@@ -7,7 +7,7 @@ import { GLOB_SRC } from '../globs.js'
 const compat = new FlatCompat()
 
 const hasNext = isPackageExists('next')
-const files = GLOB_SRC
+const files = [GLOB_SRC]
 
 /** @type {import('eslint').Linter.Config[]} */
 // @ts-expect-error TODO:

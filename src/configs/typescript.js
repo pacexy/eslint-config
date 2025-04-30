@@ -1,8 +1,8 @@
 import tseslint from 'typescript-eslint'
-import { GLOB_TS_SRC } from '../globs.js'
+import { GLOB_TS, GLOB_TSX } from '../globs.js'
 import { unusedImports } from '../plugins/unused-imports.js'
 
-const files = GLOB_TS_SRC
+const files = [GLOB_TS, GLOB_TSX]
 
 /** @type {import('eslint').Linter.Config[]} */
 export const typescript = [
