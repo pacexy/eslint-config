@@ -2,12 +2,15 @@ import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
+import pluginReactRefresh from 'eslint-plugin-react-refresh'
 import { isPackageExists } from 'local-pkg'
 import { GLOB_SRC } from '../globs.js'
 
 const compat = new FlatCompat()
 
 const hasNext = isPackageExists('next')
+const hasReactRouter = isPackageExists('@react-router/dev')
+
 const files = [GLOB_SRC]
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -30,6 +33,41 @@ export const react = [
           ...pluginReactHooks.configs['recommended-latest'],
           files,
           name: 'react/hooks/recommended',
+        },
+        {
+          ...pluginReactRefresh.configs.recommended,
+          name: 'react/refresh',
+          files,
+          rules: {
+            'react-refresh/only-export-components': [
+              'warn',
+              {
+                allowConstantExport: true,
+                allowExportNames: [
+                  ...(hasNext
+                    ? [
+                        'dynamic',
+                        'dynamicParams',
+                        'revalidate',
+                        'fetchCache',
+                        'runtime',
+                        'preferredRegion',
+                        'maxDuration',
+                        'config',
+                        'generateStaticParams',
+                        'metadata',
+                        'generateMetadata',
+                        'viewport',
+                        'generateViewport',
+                      ]
+                    : []),
+                  ...(hasReactRouter
+                    ? ['meta', 'links', 'headers', 'loader', 'action']
+                    : []),
+                ],
+              },
+            ],
+          },
         },
       ]),
   {

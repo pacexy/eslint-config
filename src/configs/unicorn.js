@@ -10,6 +10,7 @@ export const unicorn = [
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/no-array-reduce': 'off',
       'unicorn/no-null': 'off', // https://github.com/sindresorhus/meta/discussions/7
+      'unicorn/prefer-global-this': 'off',
     },
   },
 ]
