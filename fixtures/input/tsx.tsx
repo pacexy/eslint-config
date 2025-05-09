@@ -20,6 +20,7 @@ export function Comp() {
       {[1, 2, 3].map((i) => (
         <div>{i}</div>
       ))}
+      {count ? 'foo' : 'bar'} <span>hello world</span>
     </div>
   )
 }

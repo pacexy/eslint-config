@@ -1,6 +1,7 @@
 import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import pluginReact from 'eslint-plugin-react'
+import pluginReactGoogleTranslate from 'eslint-plugin-react-google-translate'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginReactRefresh from 'eslint-plugin-react-refresh'
 import { isPackageExists } from 'local-pkg'
@@ -67,6 +68,18 @@ export const react = [
                 ],
               },
             ],
+          },
+        },
+        {
+          name: 'react/google-translate',
+          files,
+          plugins: {
+            'react-google-translate': pluginReactGoogleTranslate,
+          },
+          rules: {
+            'react-google-translate/no-conditional-text-nodes-with-siblings':
+              'warn',
+            'react-google-translate/no-return-text-nodes': 'warn',
           },
         },
       ]),
