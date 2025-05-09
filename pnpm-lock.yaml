@@ -17,6 +17,9 @@ importers:
       '@eslint/js':
         specifier: ^9.25.1
         version: 9.25.1
+      eslint-config-flat-gitignore:
+        specifier: ^2.1.0
+        version: 2.1.0(eslint@9.25.1(jiti@2.4.1))
       eslint-config-next:
         specifier: ^15.3.1
         version: 15.3.1(eslint@9.25.1(jiti@2.4.1))(typescript@5.6.3)
@@ -933,6 +936,11 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  eslint-config-flat-gitignore@2.1.0:
+    resolution: {integrity: sha512-cJzNJ7L+psWp5mXM7jBX+fjHtBvvh06RBlcweMhKD8jWqQw0G78hOW5tpVALGHGFPsBV+ot2H+pdDGJy6CV8pA==}
+    peerDependencies:
+      eslint: ^9.5.0
 
   eslint-config-next@15.3.1:
     resolution: {integrity: sha512-GnmyVd9TE/Ihe3RrvcafFhXErErtr2jS0JDeCSp3vWvy86AXwHsRBt0E3MqP/m8ACS1ivcsi5uaqjbhsG18qKw==}
@@ -3087,6 +3095,11 @@ snapshots:
   escape-string-regexp@1.0.5: {}
 
   escape-string-regexp@4.0.0: {}
+
+  eslint-config-flat-gitignore@2.1.0(eslint@9.25.1(jiti@2.4.1)):
+    dependencies:
+      '@eslint/compat': 1.2.8(eslint@9.25.1(jiti@2.4.1))
+      eslint: 9.25.1(jiti@2.4.1)
 
   eslint-config-next@15.3.1(eslint@9.25.1(jiti@2.4.1))(typescript@5.6.3):
     dependencies:
