@@ -23,6 +23,9 @@ importers:
       eslint-plugin-react:
         specifier: ^7.37.5
         version: 7.37.5(eslint@9.25.1(jiti@2.4.1))
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.25.1(jiti@2.4.1))
       eslint-plugin-unicorn:
         specifier: ^59.0.0
         version: 59.0.0(eslint@9.25.1(jiti@2.4.1))
@@ -63,6 +66,10 @@ importers:
       simple-git-hooks:
         specifier: ^2.13.0
         version: 2.13.0
+    optionalDependencies:
+      '@types/react':
+        specifier: ^19.1.3
+        version: 19.1.3
 
 packages:
 
@@ -430,6 +437,9 @@ packages:
   '@types/pegjs@0.10.6':
     resolution: {integrity: sha512-eLYXDbZWXh2uxf+w8sXS8d6KSoXTswfps6fvCUuVAGN8eRpfe7h9eSRydxiSJvo9Bf+GzifsDOr9TMQlmJdmkw==}
 
+  '@types/react@19.1.3':
+    resolution: {integrity: sha512-dLWQ+Z0CkIvK1J8+wrDPwGxEYFA4RAyHoZPxHVGspYmFVnwGSNT24cGIhFJrtfRnWVuW8X7NO52gCXmhkVUWGQ==}
+
   '@typescript-eslint/eslint-plugin@8.31.1':
     resolution: {integrity: sha512-oUlH4h1ABavI4F0Xnl8/fOtML/eu8nI2A1nYd+f+55XI0BLu+RIqKoCiZKNo6DtqZBEQm5aNKA20G3Z5w3R6GQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -778,6 +788,9 @@ packages:
 
   crossws@0.3.4:
     resolution: {integrity: sha512-uj0O1ETYX1Bh6uSgktfPvwDiPYGQ3aI4qVsaC/LWpkIzGj1nUYm5FK3K+t11oOlpN01lGbprFCH4wBlKdJjVgw==}
+
+  csstype@3.1.3:
+    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -2500,6 +2513,11 @@ snapshots:
 
   '@types/pegjs@0.10.6': {}
 
+  '@types/react@19.1.3':
+    dependencies:
+      csstype: 3.1.3
+    optional: true
+
   '@typescript-eslint/eslint-plugin@8.31.1(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.1))(typescript@5.6.3))(eslint@9.25.1(jiti@2.4.1))(typescript@5.6.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
@@ -2855,6 +2873,9 @@ snapshots:
   crossws@0.3.4:
     dependencies:
       uncrypto: 0.1.3
+
+  csstype@3.1.3:
+    optional: true
 
   damerau-levenshtein@1.0.8: {}
 

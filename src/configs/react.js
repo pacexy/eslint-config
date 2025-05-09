@@ -1,6 +1,7 @@
 import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import pluginReact from 'eslint-plugin-react'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
 import { isPackageExists } from 'local-pkg'
 import { GLOB_SRC } from '../globs.js'
 
@@ -24,6 +25,11 @@ export const react = [
           name: 'react/jsx-runtime',
           files,
           ...pluginReact.configs.flat?.['jsx-runtime'],
+        },
+        {
+          ...pluginReactHooks.configs['recommended-latest'],
+          files,
+          name: 'react/hooks/recommended',
         },
       ]),
   {
