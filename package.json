@@ -25,6 +25,7 @@
     "build:typegen": "node scripts/typegen.js",
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
+    "lint": "eslint",
     "prepare": "simple-git-hooks",
     "update": "corepack use pnpm@latest && pnpm update --latest",
     "version": "pnpm run build",
