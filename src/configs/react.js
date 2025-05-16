@@ -63,7 +63,17 @@ export const react = [
                       ]
                     : []),
                   ...(hasReactRouter
-                    ? ['meta', 'links', 'headers', 'loader', 'action']
+                    ? [
+                        'loader',
+                        'clientLoader',
+                        'action',
+                        'clientAction',
+                        'headers',
+                        'handle',
+                        'links',
+                        'meta',
+                        'shouldRevalidate',
+                      ]
                     : []),
                 ],
               },
