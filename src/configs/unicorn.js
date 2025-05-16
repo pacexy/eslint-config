@@ -11,6 +11,7 @@ export const unicorn = [
       'unicorn/no-array-reduce': 'off',
       'unicorn/no-null': 'off', // https://github.com/sindresorhus/meta/discussions/7
       'unicorn/prefer-global-this': 'off',
+      'unicorn/prefer-top-level-await': 'off', // https://github.com/orgs/web-infra-dev/discussions/10
     },
   },
 ]
