@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "checkJs": true,
-    "jsx": "preserve",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "strictFunctionTypes": true,
     "strictNullChecks": true,
+    "allowImportingTsExtensions": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "checkJs": true,
+    "jsx": "preserve",
     "target": "ES2022"
   },
   "exclude": ["node_modules", "**/node_modules/*"]

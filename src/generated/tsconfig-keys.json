@@ -1,0 +1,209 @@
+{
+  "name": "root",
+  "groups": [
+    {
+      "name": "compilerOptions",
+      "categories": [
+        {
+          "name": "Type Checking",
+          "options": [
+            "allowUnreachableCode",
+            "allowUnusedLabels",
+            "alwaysStrict",
+            "exactOptionalPropertyTypes",
+            "noFallthroughCasesInSwitch",
+            "noImplicitAny",
+            "noImplicitOverride",
+            "noImplicitReturns",
+            "noImplicitThis",
+            "noPropertyAccessFromIndexSignature",
+            "noUncheckedIndexedAccess",
+            "noUnusedLocals",
+            "noUnusedParameters",
+            "strict",
+            "strictBindCallApply",
+            "strictBuiltinIteratorReturn",
+            "strictFunctionTypes",
+            "strictNullChecks",
+            "strictPropertyInitialization",
+            "useUnknownInCatchVariables"
+          ]
+        },
+        {
+          "name": "Modules",
+          "options": [
+            "allowArbitraryExtensions",
+            "allowImportingTsExtensions",
+            "allowUmdGlobalAccess",
+            "baseUrl",
+            "customConditions",
+            "module",
+            "moduleResolution",
+            "moduleSuffixes",
+            "noResolve",
+            "noUncheckedSideEffectImports",
+            "paths",
+            "resolveJsonModule",
+            "resolvePackageJsonExports",
+            "resolvePackageJsonImports",
+            "rewriteRelativeImportExtensions",
+            "rootDir",
+            "rootDirs",
+            "typeRoots",
+            "types"
+          ]
+        },
+        {
+          "name": "Emit",
+          "options": [
+            "declaration",
+            "declarationDir",
+            "declarationMap",
+            "downlevelIteration",
+            "emitBOM",
+            "emitDeclarationOnly",
+            "importHelpers",
+            "inlineSourceMap",
+            "inlineSources",
+            "mapRoot",
+            "newLine",
+            "noEmit",
+            "noEmitHelpers",
+            "noEmitOnError",
+            "outDir",
+            "outFile",
+            "preserveConstEnums",
+            "removeComments",
+            "sourceMap",
+            "sourceRoot",
+            "stripInternal"
+          ]
+        },
+        {
+          "name": "JavaScript Support",
+          "options": ["allowJs", "checkJs", "maxNodeModuleJsDepth"]
+        },
+        {
+          "name": "Editor Support",
+          "options": ["disableSizeLimit", "plugins"]
+        },
+        {
+          "name": "Interop Constraints",
+          "options": [
+            "allowSyntheticDefaultImports",
+            "erasableSyntaxOnly",
+            "esModuleInterop",
+            "forceConsistentCasingInFileNames",
+            "isolatedDeclarations",
+            "isolatedModules",
+            "preserveSymlinks",
+            "verbatimModuleSyntax"
+          ]
+        },
+        {
+          "name": "Backwards Compatibility",
+          "options": [
+            "charset",
+            "importsNotUsedAsValues",
+            "keyofStringsOnly",
+            "noImplicitUseStrict",
+            "noStrictGenericChecks",
+            "out",
+            "preserveValueImports",
+            "suppressExcessPropertyErrors",
+            "suppressImplicitAnyIndexErrors"
+          ]
+        },
+        {
+          "name": "Language and Environment",
+          "options": [
+            "emitDecoratorMetadata",
+            "experimentalDecorators",
+            "jsx",
+            "jsxFactory",
+            "jsxFragmentFactory",
+            "jsxImportSource",
+            "lib",
+            "libReplacement",
+            "moduleDetection",
+            "noLib",
+            "reactNamespace",
+            "target",
+            "useDefineForClassFields"
+          ]
+        },
+        {
+          "name": "Compiler Diagnostics",
+          "options": [
+            "diagnostics",
+            "explainFiles",
+            "extendedDiagnostics",
+            "generateCpuProfile",
+            "generateTrace",
+            "listEmittedFiles",
+            "listFiles",
+            "noCheck",
+            "traceResolution"
+          ]
+        },
+        {
+          "name": "Projects",
+          "options": [
+            "composite",
+            "disableReferencedProjectLoad",
+            "disableSolutionSearching",
+            "disableSourceOfProjectReferenceRedirect",
+            "incremental",
+            "tsBuildInfoFile"
+          ]
+        },
+        {
+          "name": "Output Formatting",
+          "options": ["noErrorTruncation", "preserveWatchOutput", "pretty"]
+        },
+        {
+          "name": "Completeness",
+          "options": ["skipDefaultLibCheck", "skipLibCheck"]
+        },
+        {
+          "name": "Command Line",
+          "options": []
+        },
+        {
+          "name": "Watch Options",
+          "options": ["assumeChangesOnlyAffectDirectDependencies"]
+        }
+      ]
+    },
+    {
+      "name": "watchOptions",
+      "categories": [
+        {
+          "name": "watchOptions",
+          "options": [
+            "watchFile",
+            "watchDirectory",
+            "fallbackPolling",
+            "synchronousWatchDirectory",
+            "excludeDirectories",
+            "excludeFiles"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "typeAcquisition",
+      "categories": [
+        {
+          "name": "typeAcquisition",
+          "options": [
+            "enable",
+            "include",
+            "exclude",
+            "disableFilenameBasedTypeAcquisition"
+          ]
+        }
+      ]
+    }
+  ]
+}
