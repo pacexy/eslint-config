@@ -1,33 +1,9 @@
-import tsconfigKeys from '../generated/tsconfig-keys.json' with { type: 'json' }
+import { sortTsconfig } from '@antfu/eslint-config'
 
-/** @type {import('eslint').Linter.Config[]} */
-const sortTsconfig = [
-  {
+// eslint-disable-next-line unicorn/no-useless-spread
+export const sort = [
+  ...sortTsconfig().map((c) => ({
+    ...c,
     files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
-    name: 'sort/tsconfig',
-    rules: {
-      'jsonc/sort-keys': [
-        'error',
-        {
-          order: [
-            'extends',
-            'compilerOptions',
-            'references',
-            'files',
-            'include',
-            'exclude',
-          ],
-          pathPattern: '^$',
-        },
-        ...tsconfigKeys.groups.map((g) => {
-          return {
-            order: g.categories.flatMap((c) => c.options),
-            pathPattern: `^${g.name}$`,
-          }
-        }),
-      ],
-    },
-  },
+  })),
 ]
-
-export const sort = [...sortTsconfig]
