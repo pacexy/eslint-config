@@ -1,7 +1,7 @@
-import { sortTsconfig } from '@antfu/eslint-config'
+import { sortPackageJson, sortTsconfig } from '@antfu/eslint-config'
 
-// eslint-disable-next-line unicorn/no-useless-spread
 export const sort = [
+  ...(await sortPackageJson()),
   ...sortTsconfig().map((c) => ({
     ...c,
     files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
