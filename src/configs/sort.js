@@ -1,4 +1,8 @@
-import { sortPackageJson, sortTsconfig } from '@antfu/eslint-config'
+import {
+  perfectionist,
+  sortPackageJson,
+  sortTsconfig,
+} from '@antfu/eslint-config'
 
 export const sort = [
   ...(await sortPackageJson()),
@@ -6,4 +10,5 @@ export const sort = [
     ...c,
     files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
   })),
+  ...(await perfectionist()),
 ]
