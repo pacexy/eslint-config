@@ -1,14 +1,8 @@
-import {
-  perfectionist,
-  sortPackageJson,
-  sortTsconfig,
-} from '@antfu/eslint-config'
-
+/** @type {import('eslint').Linter.Config[]} */
 export const sort = [
-  ...(await sortPackageJson()),
   {
     files: ['**/package.json'],
-    name: 'sort/package-json',
+    name: 'pacexy/sort/package-json',
     rules: {
       'jsonc/sort-keys': [
         'error',
@@ -19,9 +13,5 @@ export const sort = [
       ],
     },
   },
-  ...sortTsconfig().map((c) => ({
-    ...c,
-    files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
-  })),
-  ...(await perfectionist()),
+  // TODO: upgrade dep after antfu/eslint-config#733 is merged
 ]
