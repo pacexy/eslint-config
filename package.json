@@ -27,10 +27,10 @@
     "dev": "eslint-config-inspector --open false",
     "format": "prettier --write .",
     "lint": "eslint",
+    "postversion": "git push --follow-tags && npm publish",
     "prepare": "simple-git-hooks",
     "update": "corepack use pnpm@latest && pnpm update --latest",
-    "version": "pnpm run build",
-    "postversion": "git push --follow-tags && npm publish"
+    "version": "pnpm run build"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.16.2",
