@@ -25,8 +25,8 @@
     "build:inspector": "eslint-config-inspector build",
     "build:typegen": "node scripts/typegen.js",
     "dev": "eslint-config-inspector --open false",
-    "format": "prettier --write .",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "postversion": "git push --follow-tags && npm publish",
     "prepare": "simple-git-hooks",
     "update": "corepack use pnpm@latest && pnpm update --latest",
@@ -42,7 +42,6 @@
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^1.52.3",
     "@eslint/config-inspector": "^1.1.0",
-    "@pacexy/prettier-config": "^0.6.0",
     "@types/node": "^24.0.12",
     "eslint": "^9.30.1",
     "eslint-plugin-react-google-translate": "^0.1.1",
@@ -50,17 +49,14 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-typegen": "^2.2.1",
     "lint-staged": "^16.1.2",
-    "prettier": "^3.6.2",
     "simple-git-hooks": "^2.13.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,mdx,css,json,yml,yaml}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "eslint --fix --ignore-pattern=fixtures"
+    "*": "eslint --fix"
   },
-  "prettier": "@pacexy/prettier-config",
   "publishConfig": {
     "access": "public"
   }
