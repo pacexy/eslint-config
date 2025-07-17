@@ -18,6 +18,7 @@ export function defineConfig(options = {}, ...userConfigs) {
   // TODO: update `@default` in `OptionsConfig` jsdoc
   /** @type {Options} */
   const defaultOptions = {
+    formatters: true,
     react: enableReact,
   }
 
