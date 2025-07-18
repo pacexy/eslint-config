@@ -3,13 +3,12 @@ import pluginReactGoogleTranslate from 'eslint-plugin-react-google-translate'
 
 const files = [GLOB_SRC]
 
-/** @type {import('eslint').Linter.Config[]} */
+/** @type {import('@antfu/eslint-config').TypedFlatConfigItem[]} */
 export const react = [
   {
     name: 'pacexy/react',
     files,
     plugins: {
-      // @ts-expect-error
       'react-google-translate': pluginReactGoogleTranslate,
     },
     rules: {

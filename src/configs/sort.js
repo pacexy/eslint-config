@@ -1,4 +1,4 @@
-/** @type {import('eslint').Linter.Config[]} */
+/** @type {import("@antfu/eslint-config").TypedFlatConfigItem[]} */
 export const sort = [
   {
     files: ['**/package.json'],
