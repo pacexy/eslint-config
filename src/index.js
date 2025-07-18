@@ -4,13 +4,9 @@ import { react } from './configs/react.js'
 import { sort } from './configs/sort.js'
 
 /**
- * @typedef {import('@antfu/eslint-config').OptionsConfig} OptionsConfig
- * @typedef {import('@antfu/eslint-config').TypedFlatConfigItem} TypedFlatConfigItem
- * @typedef {OptionsConfig & Omit<TypedFlatConfigItem, 'files'>} Options
- * @typedef {import('@antfu/eslint-config').Awaitable<TypedFlatConfigItem>} UserConfig
- * @typedef {import('@antfu/eslint-config').Awaitable<TypedFlatConfigItem[]>} Config
+ * @import {Options, Config} from './types.js'
  * @param  {Options} [options]
- * @param  {UserConfig[]} userConfigs
+ * @param  {Config[]} userConfigs
  */
 export function defineConfig(options = {}, ...userConfigs) {
   const { react: enableReact = isPackageExists('react') } = options
