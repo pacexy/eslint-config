@@ -1,13 +1,14 @@
 import { writeFile } from 'node:fs/promises'
+import { combine } from '@antfu/eslint-config'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
-import { builtinRules } from 'eslint/use-at-your-own-risk'
-import pacexy from '../eslint.config.js'
+import { react } from '../src/configs/react.js'
+import { sort } from '../src/configs/sort.js'
 
-const dts = await flatConfigsToRulesDTS([
-  {
-    plugins: { '': { rules: Object.fromEntries(builtinRules) } },
-  },
-  ...await pacexy.toConfigs(),
-])
+const configs = await combine(
+  react,
+  sort,
+)
+
+const dts = await flatConfigsToRulesDTS(configs)
 
 await writeFile('src/typegen.d.ts', dts)
