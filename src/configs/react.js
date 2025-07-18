@@ -1,20 +1,25 @@
-import { GLOB_SRC } from '@antfu/eslint-config'
-import pluginReactGoogleTranslate from 'eslint-plugin-react-google-translate'
+import { ensurePackages, GLOB_SRC } from '@antfu/eslint-config'
 
 const files = [GLOB_SRC]
 
-/** @type {import('@antfu/eslint-config').TypedFlatConfigItem[]} */
-export const react = [
-  {
-    name: 'pacexy/react',
-    files,
-    plugins: {
-      'react-google-translate': pluginReactGoogleTranslate,
+/** @return {Promise<import('@antfu/eslint-config').TypedFlatConfigItem[]>} */
+export async function react() {
+  await ensurePackages([
+    'eslint-plugin-react-google-translate',
+  ])
+
+  return [
+    {
+      name: 'pacexy/react',
+      files,
+      plugins: {
+        'react-google-translate': await import('eslint-plugin-react-google-translate'),
+      },
+      rules: {
+        'react-google-translate/no-conditional-text-nodes-with-siblings': 'warn',
+        'react-google-translate/no-return-text-nodes': 'warn',
+      },
     },
-    rules: {
-      'react-google-translate/no-conditional-text-nodes-with-siblings': 'warn',
-      'react-google-translate/no-return-text-nodes': 'warn',
-    },
-  },
   // TODO: should `eslint-config-next` be included here?
-]
+  ]
+}
