@@ -1,7 +1,7 @@
 import antfu from '@antfu/eslint-config'
 import { isPackageExists } from 'local-pkg'
 import { react } from './configs/react.js'
-import { sortPackageJson } from './configs/sort.js'
+import { sort } from './overrides/sort.js'
 
 /**
  * @import {Options, Config} from './types.js'
@@ -22,8 +22,6 @@ export function defineConfig(options = {}, ...userConfigs) {
   /** @type {Config[]} */
   const configs = []
 
-  configs.push(sortPackageJson())
-
   if (enableReact) {
     configs.push(react())
   }
@@ -35,5 +33,7 @@ export function defineConfig(options = {}, ...userConfigs) {
     },
     ...configs,
     ...userConfigs,
-  )
+  ).overrides({
+    ...sort(),
+  })
 }
