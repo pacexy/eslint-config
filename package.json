@@ -15,9 +15,8 @@
   "keywords": [
     "eslint-config"
   ],
-  "main": "./eslint.config.js",
+  "main": "src/index.js",
   "files": [
-    "./eslint.config.js",
     "src"
   ],
   "scripts": {
