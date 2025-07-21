@@ -33,24 +33,24 @@
     "version": "pnpm run build"
   },
   "dependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "local-pkg": "catalog:"
+    "@antfu/eslint-config": "catalog:prod",
+    "eslint-plugin-format": "catalog:prod",
+    "local-pkg": "catalog:prod"
   },
   "optionalDependencies": {
     "@types/react": "^19.1.8"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "catalog:",
-    "@eslint/config-inspector": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-react-google-translate": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-react-refresh": "catalog:",
-    "eslint-typegen": "catalog:",
-    "lint-staged": "catalog:",
-    "simple-git-hooks": "catalog:"
+    "@eslint-react/eslint-plugin": "catalog:peer.react",
+    "@eslint/config-inspector": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-react-google-translate": "catalog:peer.react",
+    "eslint-plugin-react-hooks": "catalog:peer.react",
+    "eslint-plugin-react-refresh": "catalog:peer.react",
+    "eslint-typegen": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "simple-git-hooks": "catalog:dev"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
