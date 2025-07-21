@@ -12,6 +12,9 @@ catalogs:
     '@types/node':
       specifier: ^24.0.12
       version: 24.0.12
+    '@types/react':
+      specifier: ^19.1.8
+      version: 19.1.8
     eslint:
       specifier: ^9.30.1
       version: 9.30.1
@@ -71,6 +74,9 @@ importers:
       '@types/node':
         specifier: catalog:dev
         version: 24.0.12
+      '@types/react':
+        specifier: catalog:dev
+        version: 19.1.8
       eslint:
         specifier: catalog:dev
         version: 9.30.1(jiti@2.4.1)
@@ -92,10 +98,6 @@ importers:
       simple-git-hooks:
         specifier: catalog:dev
         version: 2.13.0
-    optionalDependencies:
-      '@types/react':
-        specifier: ^19.1.8
-        version: 19.1.8
 
 packages:
 
@@ -2494,7 +2496,6 @@ snapshots:
   '@types/react@19.1.8':
     dependencies:
       csstype: 3.1.3
-    optional: true
 
   '@types/unist@3.0.3': {}
 
@@ -2773,8 +2774,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  csstype@3.1.3:
-    optional: true
+  csstype@3.1.3: {}
 
   debug@4.4.1:
     dependencies:
