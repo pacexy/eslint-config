@@ -26,6 +26,6 @@ See [@antfu/eslint-config] for more details.
 
 ## License
 
-MIT
+[MIT](./LICENSE) License © [pacexy](https://github.com/pacexy)
 
 [@antfu/eslint-config]: https://github.com/antfu/eslint-config
