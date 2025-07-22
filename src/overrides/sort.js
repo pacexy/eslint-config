@@ -11,6 +11,5 @@ export function sort() {
       })
       return config
     },
-    // TODO: upgrade dep after antfu/eslint-config#733 is merged
   }
 }
