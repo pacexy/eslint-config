@@ -41,7 +41,7 @@
     "@eslint/config-inspector": "catalog:dev",
     "@types/node": "catalog:dev",
     "@types/react": "catalog:dev",
-    "eslint": "catalog:dev",
+    "eslint": "catalog:peer",
     "eslint-plugin-react-google-translate": "catalog:peer.react",
     "eslint-plugin-react-hooks": "catalog:peer.react",
     "eslint-plugin-react-refresh": "catalog:peer.react",

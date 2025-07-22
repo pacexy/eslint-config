@@ -15,9 +15,6 @@ catalogs:
     '@types/react':
       specifier: ^19.1.8
       version: 19.1.8
-    eslint:
-      specifier: ^9.30.1
-      version: 9.30.1
     eslint-typegen:
       specifier: ^2.2.1
       version: 2.2.1
@@ -27,6 +24,10 @@ catalogs:
     simple-git-hooks:
       specifier: ^2.13.0
       version: 2.13.0
+  peer:
+    eslint:
+      specifier: ^9.30.1
+      version: 9.30.1
   peer.react:
     '@eslint-react/eslint-plugin':
       specifier: ^1.52.3
@@ -78,7 +79,7 @@ importers:
         specifier: catalog:dev
         version: 19.1.8
       eslint:
-        specifier: catalog:dev
+        specifier: catalog:peer
         version: 9.30.1(jiti@2.4.1)
       eslint-plugin-react-google-translate:
         specifier: catalog:peer.react
