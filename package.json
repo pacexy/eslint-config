@@ -26,10 +26,9 @@
     "dev": "eslint-config-inspector --open false",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "postversion": "git push --follow-tags && npm publish",
+    "postversion": "git push --follow-tags",
     "prepare": "simple-git-hooks",
-    "update": "corepack use pnpm@latest && pnpm update --latest",
-    "version": "pnpm run build"
+    "update": "corepack use pnpm@latest && pnpm update --latest"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.17.0",
@@ -54,8 +53,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
