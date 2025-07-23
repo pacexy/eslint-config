@@ -15,7 +15,6 @@ export function defineConfig(options = {}, ...userConfigs) {
   /** @type {Options} */
   const defaultOptions = {
     formatters: true,
-    pnpm: true,
     react: enableReact,
   }
 

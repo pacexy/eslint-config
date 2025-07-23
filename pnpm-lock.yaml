@@ -4,100 +4,52 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  dev:
-    '@eslint/config-inspector':
-      specifier: ^1.1.0
-      version: 1.1.0
-    '@types/node':
-      specifier: ^24.1.0
-      version: 24.1.0
-    '@types/react':
-      specifier: ^19.1.8
-      version: 19.1.8
-    eslint-typegen:
-      specifier: ^2.2.1
-      version: 2.2.1
-    lint-staged:
-      specifier: ^16.1.2
-      version: 16.1.2
-    simple-git-hooks:
-      specifier: ^2.13.0
-      version: 2.13.0
-  peer:
-    eslint:
-      specifier: ^9.31.0
-      version: 9.31.0
-  peer.react:
-    '@eslint-react/eslint-plugin':
-      specifier: ^1.52.3
-      version: 1.52.3
-    eslint-plugin-react-google-translate:
-      specifier: ^0.1.1
-      version: 0.1.1
-    eslint-plugin-react-hooks:
-      specifier: ^5.2.0
-      version: 5.2.0
-    eslint-plugin-react-refresh:
-      specifier: ^0.4.20
-      version: 0.4.20
-  prod:
-    '@antfu/eslint-config':
-      specifier: ^4.17.0
-      version: 4.17.0
-    eslint-plugin-format:
-      specifier: ^1.0.1
-      version: 1.0.1
-    local-pkg:
-      specifier: ^1.1.1
-      version: 1.1.1
-
 importers:
 
   .:
     dependencies:
       '@antfu/eslint-config':
-        specifier: catalog:prod
+        specifier: ^4.17.0
         version: 4.17.0(@eslint-react/eslint-plugin@1.52.3(eslint@9.31.0(jiti@2.4.1))(ts-api-utils@2.1.0(typescript@5.6.3))(typescript@5.6.3))(@vue/compiler-sfc@3.5.17)(eslint-plugin-format@1.0.1(eslint@9.31.0(jiti@2.4.1)))(eslint-plugin-react-hooks@5.2.0(eslint@9.31.0(jiti@2.4.1)))(eslint-plugin-react-refresh@0.4.20(eslint@9.31.0(jiti@2.4.1)))(eslint@9.31.0(jiti@2.4.1))(typescript@5.6.3)
       eslint-plugin-format:
-        specifier: catalog:prod
+        specifier: ^1.0.1
         version: 1.0.1(eslint@9.31.0(jiti@2.4.1))
       local-pkg:
-        specifier: catalog:prod
+        specifier: ^1.1.1
         version: 1.1.1
     devDependencies:
       '@eslint-react/eslint-plugin':
-        specifier: catalog:peer.react
+        specifier: ^1.52.3
         version: 1.52.3(eslint@9.31.0(jiti@2.4.1))(ts-api-utils@2.1.0(typescript@5.6.3))(typescript@5.6.3)
       '@eslint/config-inspector':
-        specifier: catalog:dev
+        specifier: ^1.1.0
         version: 1.1.0(eslint@9.31.0(jiti@2.4.1))
       '@types/node':
-        specifier: catalog:dev
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
-        specifier: catalog:dev
+        specifier: ^19.1.8
         version: 19.1.8
       eslint:
-        specifier: catalog:peer
+        specifier: ^9.31.0
         version: 9.31.0(jiti@2.4.1)
       eslint-plugin-react-google-translate:
-        specifier: catalog:peer.react
+        specifier: ^0.1.1
         version: 0.1.1(eslint@9.31.0(jiti@2.4.1))
       eslint-plugin-react-hooks:
-        specifier: catalog:peer.react
+        specifier: ^5.2.0
         version: 5.2.0(eslint@9.31.0(jiti@2.4.1))
       eslint-plugin-react-refresh:
-        specifier: catalog:peer.react
+        specifier: ^0.4.20
         version: 0.4.20(eslint@9.31.0(jiti@2.4.1))
       eslint-typegen:
-        specifier: catalog:dev
+        specifier: ^2.2.1
         version: 2.2.1(eslint@9.31.0(jiti@2.4.1))
       lint-staged:
-        specifier: catalog:dev
+        specifier: ^16.1.2
         version: 16.1.2
       simple-git-hooks:
-        specifier: catalog:dev
+        specifier: ^2.13.0
         version: 2.13.0
 
 packages:
