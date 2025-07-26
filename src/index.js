@@ -11,7 +11,6 @@ import { sort } from './overrides/sort.js'
 export function defineConfig(options = {}, ...userConfigs) {
   const { react: enableReact = isPackageExists('react') } = options
 
-  // TODO: update `@default` in `OptionsConfig` jsdoc
   /** @type {Options} */
   const defaultOptions = {
     formatters: true,
