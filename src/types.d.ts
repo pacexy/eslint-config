@@ -1,10 +1,11 @@
-import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { Awaitable, ConfigNames, OptionsConfig, OptionsJSX, TypedFlatConfigItem } from '@antfu/eslint-config'
 
 export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files'> {
   /**
    * @default true
    */
   formatters?: OptionsConfig['formatters']
+  jsx?: boolean | _OptionsJSX
   /**
    * @default auto-detect based on the dependencies
    */
@@ -15,13 +16,13 @@ export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files
   react?: OptionsConfig['react']
 }
 
-declare module '@antfu/eslint-config' {
-  interface OptionsJSX {
-    /**
-     * @default true
-     */
-    a11y?: OptionsJSX['a11y']
-  }
+// FIXME: This is a workaround to override `@default`
+// instead of appending it to the existing JSDoc
+interface _OptionsJSX extends OptionsJSX {
+  /**
+   * @default true
+   */
+  a11y?: OptionsJSX['a11y']
 }
 
 export type Config = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]>
