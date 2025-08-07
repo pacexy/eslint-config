@@ -15,6 +15,15 @@ export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files
   react?: OptionsConfig['react']
 }
 
+declare module '@antfu/eslint-config' {
+  interface OptionsJSX {
+    /**
+     * @default true
+     */
+    a11y?: OptionsJSX['a11y']
+  }
+}
+
 export type Config = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]>
 export type Overrides<T = TypedFlatConfigItem>
   = Partial<Record<ConfigNames, T | ((config: T) => Awaitable<T>)>>
