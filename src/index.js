@@ -9,11 +9,15 @@ import { sort } from './overrides/sort.js'
  * @param  {Config[]} userConfigs
  */
 export function defineConfig(options = {}, ...userConfigs) {
-  const { react: enableReact = isPackageExists('react') } = options
+  const {
+    nextjs: enableNextjs = isPackageExists('next'),
+    react: enableReact = isPackageExists('react'),
+  } = options
 
   /** @type {Options} */
   const defaultOptions = {
     formatters: true,
+    nextjs: enableNextjs,
     react: enableReact,
   }
 

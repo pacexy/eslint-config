@@ -21,6 +21,5 @@ export async function react() {
         'react-google-translate/no-return-text-nodes': 'warn',
       },
     },
-  // TODO: should `eslint-config-next` be included here?
   ]
 }

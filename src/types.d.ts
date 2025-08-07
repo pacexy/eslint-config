@@ -8,6 +8,10 @@ export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files
   /**
    * @default auto-detect based on the dependencies
    */
+  nextjs?: OptionsConfig['nextjs']
+  /**
+   * @default auto-detect based on the dependencies
+   */
   react?: OptionsConfig['react']
 }
 
