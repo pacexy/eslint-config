@@ -11,8 +11,8 @@ export async function react() {
 
   return [
     {
-      name: 'pacexy/react',
       files,
+      name: 'pacexy/react',
       plugins: {
         'react-google-translate': await import('eslint-plugin-react-google-translate'),
       },

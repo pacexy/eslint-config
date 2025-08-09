@@ -1,6 +1,7 @@
 import antfu from '@antfu/eslint-config'
 import { isPackageExists } from 'local-pkg'
 import { react } from './configs/react.js'
+import { perfectionist } from './overrides/perfectionist.js'
 import { sort } from './overrides/sort.js'
 
 /**
@@ -38,5 +39,6 @@ export function defineConfig(options = {}, ...userConfigs) {
     ...userConfigs,
   ).overrides({
     ...sort(),
+    ...perfectionist(),
   })
 }

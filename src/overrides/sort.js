@@ -6,8 +6,8 @@ export function sort() {
     'antfu/sort/package-json': (config) => {
       // @ts-expect-error
       config.rules['jsonc/sort-keys'].push({
-        pathPattern: '^scripts$',
         order: { type: 'asc' },
+        pathPattern: '^scripts$',
       })
       return config
     },
