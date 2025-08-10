@@ -14,6 +14,13 @@ export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files
    * @default auto-detect based on the dependencies
    */
   react?: OptionsConfig['react']
+  /**
+   * Requires installing:
+   * - `eslint-plugin-better-tailwindcss`
+   *
+   * @default auto-detect based on the dependencies
+   */
+  tailwindcss?: boolean
 }
 
 // FIXME: This is a workaround to override `@default`

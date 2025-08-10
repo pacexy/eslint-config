@@ -42,13 +42,15 @@
     "@types/node": "^24.2.0",
     "@types/react": "^19.1.9",
     "eslint": "^9.32.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-google-translate": "^0.1.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-typegen": "^2.3.0",
     "lint-staged": "^16.1.4",
-    "simple-git-hooks": "^2.13.1"
+    "simple-git-hooks": "^2.13.1",
+    "tailwindcss": "^4.1.11"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
