@@ -1,4 +1,4 @@
-import type { Awaitable, ConfigNames, OptionsConfig, OptionsJSX, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { Awaitable, ConfigNames, OptionsConfig, OptionsJSX, OptionsStylistic, TypedFlatConfigItem } from '@antfu/eslint-config'
 
 export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files'> {
   /**
@@ -33,5 +33,8 @@ interface _OptionsJSX extends OptionsJSX {
 }
 
 export type Config = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]>
+
+export type ConfigFn = (options?: OptionsStylistic) => Promise<TypedFlatConfigItem[]>
+
 export type Overrides<T = TypedFlatConfigItem>
   = Partial<Record<ConfigNames, T | ((config: T) => Awaitable<T>)>>

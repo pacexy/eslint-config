@@ -34,7 +34,9 @@ export function defineConfig(options = {}, ...userConfigs) {
   }
 
   if (enableTailwind) {
-    configs.push(tailwindcss())
+    configs.push(tailwindcss({
+      stylistic: options.stylistic,
+    }))
   }
 
   return antfu(
