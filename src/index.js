@@ -20,7 +20,7 @@ export function defineConfig(options = {}, ...userConfigs) {
   /** @type {Options} */
   const defaultOptions = {
     formatters: true,
-    jsx: { a11y: true },
+    jsx: { a11y: enableReact },
     nextjs: enableNextjs,
     react: enableReact,
     tailwindcss: enableTailwind,

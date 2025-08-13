@@ -27,7 +27,7 @@ export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files
 // instead of appending it to the existing JSDoc
 interface _OptionsJSX extends OptionsJSX {
   /**
-   * @default true
+   * @default auto-detect based on the dependencies
    */
   a11y?: OptionsJSX['a11y']
 }
