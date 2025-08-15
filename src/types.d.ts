@@ -1,10 +1,6 @@
 import type { Awaitable, ConfigNames, OptionsConfig, OptionsJSX, OptionsStylistic, TypedFlatConfigItem } from '@antfu/eslint-config'
 
 export interface Options extends OptionsConfig, Omit<TypedFlatConfigItem, 'files'> {
-  /**
-   * @default true
-   */
-  formatters?: OptionsConfig['formatters']
   jsx?: boolean | _OptionsJSX
   /**
    * @default auto-detect based on the dependencies
