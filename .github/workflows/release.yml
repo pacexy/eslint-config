@@ -31,6 +31,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      # Trusted publishing requires npm CLI version 11.5.1 or later.
+      - run: npm i -g npm@latest
+      - run: npm publish --access public
