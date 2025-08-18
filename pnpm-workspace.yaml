@@ -1,0 +1,4 @@
+overrides:
+  eslint-plugin-vue: '-'
+  eslint-processor-vue-blocks: '-'
+  vue-eslint-parser: '-'
