@@ -4,6 +4,7 @@ import { react } from './configs/react.js'
 import { tailwindcss } from './configs/tailwindcss.js'
 import { perfectionist } from './overrides/perfectionist.js'
 import { sort } from './overrides/sort.js'
+import { toml } from './overrides/toml.js'
 
 /**
  * @import {Options, Config} from './types.js'
@@ -47,6 +48,7 @@ export function defineConfig(options = {}, ...userConfigs) {
     ...userConfigs,
   ).overrides({
     ...sort(),
+    ...toml(),
     ...perfectionist(),
   })
 }
