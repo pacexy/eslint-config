@@ -2,6 +2,7 @@ import antfu from '@antfu/eslint-config'
 import { isPackageExists } from 'local-pkg'
 import { react } from './configs/react.js'
 import { tailwindcss } from './configs/tailwindcss.js'
+import { javascript } from './overrides/javascript.js'
 import { perfectionist } from './overrides/perfectionist.js'
 import { sort } from './overrides/sort.js'
 import { toml } from './overrides/toml.js'
@@ -47,6 +48,7 @@ export function defineConfig(options = {}, ...userConfigs) {
     ...configs,
     ...userConfigs,
   ).overrides({
+    ...javascript(),
     ...sort(),
     ...toml(),
     ...perfectionist(),
