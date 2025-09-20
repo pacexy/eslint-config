@@ -7,30 +7,9 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    uses: sxzz/workflows/.github/workflows/release.yml@v1
+    with:
+      publish: true
     permissions:
       contents: write
       id-token: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          # https://docs.github.com/en/actions/tutorials/publishing-packages/publishing-nodejs-packages#publishing-packages-to-the-npm-registry
-          registry-url: 'https://registry.npmjs.org'
-          cache: pnpm
-
-      - run: pnpm install
-      - run: pnpm run build
-
-      - run: npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      # Trusted publishing requires npm CLI version 11.5.1 or later.
-      - run: npm i -g npm@latest
-      - run: npm publish --access public
