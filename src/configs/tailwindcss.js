@@ -27,7 +27,7 @@ export async function tailwindcss(options = {}) {
         // Correctness rules
         'better-tailwindcss/no-conflicting-classes': 'error',
         'better-tailwindcss/no-restricted-classes': 'error',
-        'better-tailwindcss/no-unregistered-classes': 'error',
+        'better-tailwindcss/no-unknown-classes': 'error',
 
         // Stylistic rules
         ...stylistic && {

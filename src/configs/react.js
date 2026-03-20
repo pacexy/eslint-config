@@ -14,7 +14,7 @@ export async function react() {
       files,
       name: 'pacexy/react',
       plugins: {
-        'react-google-translate': await import('eslint-plugin-react-google-translate'),
+        'react-google-translate': (await import('eslint-plugin-react-google-translate')).default,
       },
       rules: {
         'react-google-translate/no-conditional-text-nodes-with-siblings': 'warn',
