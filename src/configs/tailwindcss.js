@@ -14,31 +14,26 @@ export async function tailwindcss(options = {}) {
     'eslint-plugin-better-tailwindcss',
   ])
 
-  const { default: eslintPluginBetterTailwindcss } = await import('eslint-plugin-better-tailwindcss')
+  const { default: betterTailwindcss } = await import('eslint-plugin-better-tailwindcss')
 
   return [
     {
       files,
       name: 'pacexy/tailwindcss',
       plugins: {
-        'better-tailwindcss': eslintPluginBetterTailwindcss,
+        'better-tailwindcss': betterTailwindcss,
       },
       rules: {
         // Correctness rules
-        'better-tailwindcss/no-conflicting-classes': 'error',
         'better-tailwindcss/no-restricted-classes': 'error',
-        'better-tailwindcss/no-unknown-classes': 'error',
+        ...betterTailwindcss.configs.correctness.rules,
 
         // Stylistic rules
         ...stylistic && {
-          'better-tailwindcss/enforce-consistent-class-order': 'warn',
           'better-tailwindcss/enforce-consistent-important-position': 'warn',
-          'better-tailwindcss/enforce-consistent-line-wrapping': 'warn',
           'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
           'better-tailwindcss/enforce-shorthand-classes': 'warn',
-          'better-tailwindcss/no-deprecated-classes': 'warn',
-          'better-tailwindcss/no-duplicate-classes': 'warn',
-          'better-tailwindcss/no-unnecessary-whitespace': 'warn',
+          ...betterTailwindcss.configs.stylistic.rules,
         },
       },
     },

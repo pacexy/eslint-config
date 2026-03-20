@@ -9,16 +9,17 @@ export async function react() {
     'eslint-plugin-react-google-translate',
   ])
 
+  const { default: reactGoogleTranslate } = await import('eslint-plugin-react-google-translate')
+
   return [
     {
       files,
       name: 'pacexy/react',
       plugins: {
-        'react-google-translate': (await import('eslint-plugin-react-google-translate')).default,
+        'react-google-translate': reactGoogleTranslate,
       },
       rules: {
-        'react-google-translate/no-conditional-text-nodes-with-siblings': 'warn',
-        'react-google-translate/no-return-text-nodes': 'warn',
+        ...reactGoogleTranslate.configs.recommended.rules,
       },
     },
   ]
