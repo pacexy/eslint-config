@@ -31,7 +31,9 @@ export async function tailwindcss(options = {}) {
         // Stylistic rules
         ...stylistic && {
           'better-tailwindcss/enforce-consistent-important-position': 'warn',
+          'better-tailwindcss/enforce-consistent-variant-order': 'warn',
           'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
+          'better-tailwindcss/enforce-logical-properties': 'warn',
           'better-tailwindcss/enforce-shorthand-classes': 'warn',
           ...betterTailwindcss.configs.stylistic.rules,
         },
