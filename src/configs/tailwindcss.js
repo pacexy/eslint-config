@@ -32,7 +32,8 @@ export async function tailwindcss(options = {}) {
         ...stylistic && {
           'better-tailwindcss/enforce-consistent-important-position': 'warn',
           'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
-          'better-tailwindcss/enforce-logical-properties': 'warn',
+          // Logical properties are unnecessary in most cases and can be harder to read, for example `size-*` expands to `block-* inline-*`.
+          // 'better-tailwindcss/enforce-logical-properties': 'warn',
           'better-tailwindcss/enforce-shorthand-classes': 'warn',
           ...betterTailwindcss.configs.stylistic.rules,
         },
