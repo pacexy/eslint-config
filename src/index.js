@@ -7,6 +7,7 @@ import { perfectionist } from './overrides/perfectionist.js'
 import { sort } from './overrides/sort.js'
 import { stylistic } from './overrides/stylistic.js'
 import { toml } from './overrides/toml.js'
+import { typescript } from './overrides/typescript.js'
 
 /**
  * @import {Options, Config} from './types.js'
@@ -51,6 +52,7 @@ export function defineConfig(options = {}, ...userConfigs) {
     ...sort(),
     ...stylistic(),
     ...toml(),
+    ...typescript(),
     ...perfectionist(),
   })
 }
