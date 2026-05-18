@@ -7,6 +7,7 @@ export function stylistic() {
       config.rules = {
         ...config.rules,
         'style/brace-style': ['error', '1tbs'],
+        'style/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
       }
       return config
     },
