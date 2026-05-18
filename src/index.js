@@ -5,6 +5,7 @@ import { tailwindcss } from './configs/tailwindcss.js'
 import { javascript } from './overrides/javascript.js'
 import { perfectionist } from './overrides/perfectionist.js'
 import { sort } from './overrides/sort.js'
+import { stylistic } from './overrides/stylistic.js'
 import { toml } from './overrides/toml.js'
 
 /**
@@ -35,9 +36,7 @@ export function defineConfig(options = {}, ...userConfigs) {
   }
 
   if (enableTailwind) {
-    configs.push(tailwindcss({
-      stylistic: options.stylistic,
-    }))
+    configs.push(tailwindcss({ stylistic: options.stylistic }))
   }
 
   return antfu(
@@ -50,6 +49,7 @@ export function defineConfig(options = {}, ...userConfigs) {
   ).overrides({
     ...javascript(),
     ...sort(),
+    ...stylistic(),
     ...toml(),
     ...perfectionist(),
   })
